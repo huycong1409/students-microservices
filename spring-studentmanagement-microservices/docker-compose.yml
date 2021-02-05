@@ -1,0 +1,39 @@
+version: '2.1'
+
+services:
+#  config-server:
+#    image: config-server
+#    container_name: config-server
+#    build:
+#      context: ./spring-sm-config-server
+#      dockerfile: ./Dockerfile
+#    mem_limit: 512M
+#    ports:
+#      - 8888:8888
+  discovery-server:
+    image: discovery-server
+    container_name: discovery-server
+    build:
+      context: ./discovery-server
+      dockerfile: ./Dockerfile
+    mem_limit: 512M
+    ports:
+      - 8761:8761
+  admin-server:
+    image: admin-server
+    container_name: admin-server
+    build:
+      context: ./spring-sm-admin-server
+      dockerfile:  ./Dockerfile
+    mem_limit: 512M
+    ports:
+      - 9090:9090
+#  student-server:
+#    image: student-server
+#    container_name: student-server
+#    build:
+#      context: ./spring-sm-students-service
+#      dockerfile:  ./Dockerfile
+#    mem_limit: 512M
+#    ports:
+#      - 9001:9001
