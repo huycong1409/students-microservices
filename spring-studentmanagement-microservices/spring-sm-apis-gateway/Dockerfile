@@ -1,4 +1,4 @@
-FROM openjdk:8u141-jre
+FROM openjdk:8u342-jre
 VOLUME /tmp
 #EXPOSE 9001
 ADD target/spring-sm-api-gateway-0.0.1-SNAPSHOT.jar app.jar
